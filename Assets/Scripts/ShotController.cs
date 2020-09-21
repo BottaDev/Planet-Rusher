@@ -22,8 +22,11 @@ public class ShotController : FakeGravityBody
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 10)
+        {
             Destroy(collision.gameObject);
-
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.layer == 8)
             Destroy(gameObject);
     }
 }
