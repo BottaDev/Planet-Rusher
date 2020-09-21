@@ -11,12 +11,13 @@ public class LevelManager : MonoBehaviour
 
     private float currentLevelTime;
     private UIManager uiManager;
-    private bool gameEnded = false;
+    private bool gameEnded = true;
 
     private void Start()
     {
         currentLevelTime = levelTime;
         uiManager = GetComponent<UIManager>();
+        StartCoroutine(StartLevel());
     }
 
     private void Update()
@@ -33,6 +34,13 @@ public class LevelManager : MonoBehaviour
             currentLevelTime -= Time.deltaTime;
             uiManager.UpdateTimeLeft((int)currentLevelTime);
         }
+    }
+
+    private IEnumerator StartLevel()
+    {
+        uiManager.StartCountDown();
+        yield return new WaitForSeconds(3f);
+        gameEnded = false;
     }
 
     public void WinLoseGame(bool playerWon)

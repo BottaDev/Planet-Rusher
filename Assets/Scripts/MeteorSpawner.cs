@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
 {
+    [Range(min: 0, max:3f)]
     public float spawnTime;
     public float radius = 5f;
     public GameObject meteorPrefab;
 
-    private float currentSpawnTime = 2f;
-    
+    private float currentSpawnTime = 3f;    
 
     private void Update()
     {

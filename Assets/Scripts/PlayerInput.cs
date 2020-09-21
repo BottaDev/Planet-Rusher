@@ -29,7 +29,6 @@ public class PlayerInput : MonoBehaviour
             Shot();
         else
             currentFireRate -= Time.deltaTime;
-
     }
 
     private void FixedUpdate()
