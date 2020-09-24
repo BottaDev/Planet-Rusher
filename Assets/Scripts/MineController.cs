@@ -14,6 +14,9 @@ public class MineController : FakeGravityBody
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 10)
+        {
             Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

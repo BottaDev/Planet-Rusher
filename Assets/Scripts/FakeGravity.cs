@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class FakeGravity : MonoBehaviour
 {
+    public float minSize;
     public float gravity = -50;
+
     private float xRest;
     private float yRest;
     private float zRest;
-    public float size;
 
     private void Update()
     {
-        if(transform.localScale.x > size && transform.localScale.y > size && transform.localScale.z > size)
-        {
+        if (transform.localScale.x > minSize && transform.localScale.y > minSize && transform.localScale.z > minSize)
+            ShrinkPlanet();
+    }
+
+    private void ShrinkPlanet()
+    {
         xRest -= 0.5f * Time.deltaTime;
         yRest -= 0.5f * Time.deltaTime;
         zRest -= 0.5f * Time.deltaTime;
 
         transform.localScale = new Vector3(50 + xRest, 50 + yRest, 50 + zRest);
-        }
     }
 
     public void Attract(Transform objBody, Rigidbody rigBody)

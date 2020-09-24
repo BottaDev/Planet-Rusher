@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         if (playerWon && !gameEnded)
             uiManager.ShowWinLoseScreen(playerWon);
         else if (!playerWon && !gameEnded)
-            uiManager.ShowWinLoseScreen(!playerWon);
+            uiManager.ShowWinLoseScreen(playerWon);
 
         endGameCamera.SetActive(true);
         gameEnded = true;
