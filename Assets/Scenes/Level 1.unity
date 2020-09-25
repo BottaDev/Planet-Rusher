@@ -2218,7 +2218,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2911,7 +2911,7 @@ PrefabInstance:
     - target: {fileID: 6722673902853070545, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.576
+      value: 20.72
       objectReference: {fileID: 0}
     - target: {fileID: 6722673902853070545, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
@@ -2957,6 +2957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722673902853070546, guid: af33c82486fe34e45aab2ddb3801d2ed,
+        type: 3}
+      propertyPath: timeInv
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6722673902853070549, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
