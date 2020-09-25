@@ -24,6 +24,14 @@ public class PlayerEntity : FakeGravityBody
         Destroy(gameObject);
     }
 
+    private void Update()
+    {
+        currentTimeInv -= Time.deltaTime;
+
+        if (currentTimeInv <= 0)
+            DesactiveInvulnerability();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 10)
@@ -34,12 +42,6 @@ public class PlayerEntity : FakeGravityBody
     {
         sphere.SetActive(true);
         currentTimeInv = timeInv;
-        currentTimeInv -= Time.deltaTime;
-
-        if (currentTimeInv <= 0)
-        {
-            DesactiveInvulnerability();
-        }
     }
 
     public void DesactiveInvulnerability()
