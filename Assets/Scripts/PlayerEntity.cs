@@ -11,6 +11,10 @@ public class PlayerEntity : FakeGravityBody
     [Header("Shot Settings")]
     public GameObject shotPrefab;
     public Transform spawnPosition;
+    [Header("PowerUp")]
+    public GameObject sphere;
+    public float timeInv;
+    private float currentTimeInv;
 
     private void KillPlayer()
     {
@@ -24,5 +28,22 @@ public class PlayerEntity : FakeGravityBody
     {
         if (collision.gameObject.layer == 10)
             KillPlayer();
+    }
+
+    public void ActiveInvulnerability()
+    {
+        sphere.SetActive(true);
+        currentTimeInv = timeInv;
+        currentTimeInv -= Time.deltaTime;
+
+        if (currentTimeInv <= 0)
+        {
+            DesactiveInvulnerability();
+        }
+    }
+
+    public void DesactiveInvulnerability()
+    {
+        sphere.SetActive(false);
     }
 }
