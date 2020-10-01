@@ -46,7 +46,12 @@ public class LevelManager : MonoBehaviour
     public void WinLoseGame(bool playerWon)
     {
         if (playerWon && !gameEnded)
+        {
             uiManager.ShowWinLoseScreen(playerWon);
+
+            PlayerInput player = GameObject.Find("Player").GetComponent<PlayerInput>();
+            player.enabled = false;
+        }
         else if (!playerWon && !gameEnded)
             uiManager.ShowWinLoseScreen(playerWon);
 
