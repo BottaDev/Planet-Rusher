@@ -11,11 +11,17 @@ public class PlayerInput : MonoBehaviour
     private float inputX;
 
     private float currentFireRate = 0;
+    private UIManager uiManager;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerEntity = GetComponent<PlayerEntity>();
+    }
+
+    private void Start()
+    {
+        uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
     }
 
     private void Update()
@@ -44,5 +50,7 @@ public class PlayerInput : MonoBehaviour
         Instantiate(playerEntity.shotPrefab, playerEntity.spawnPosition.position, playerEntity.spawnPosition.rotation);
 
         currentFireRate = playerEntity.fireRate;
+
+        uiManager.StartCd(playerEntity.fireRate);
     }
 }
