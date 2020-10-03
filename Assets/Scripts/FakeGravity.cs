@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FakeGravity : MonoBehaviour
 {
-    public float minSize;
+    public float minSize;       // Size to shrink
     public float gravity = -50;
 
     private float xRest;

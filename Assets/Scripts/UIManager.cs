@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,12 +11,20 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timeLeftText;
     public TextMeshProUGUI countDownText;
     public GameObject playerArea;
+    public Image shotIndicator;
     [Header("Screens")]
     public GameObject WinScreen;
     public GameObject LoseScreen;
 
     private float countDownTimer = 3f;
     private bool countDownStarted = false;
+    private bool inCooldown = false;
+    private float fireRate;
+
+    private void Start()
+    {
+        shotIndicator.fillAmount = 1f;
+    }
 
     private void Update()
     {
@@ -28,6 +37,17 @@ public class UIManager : MonoBehaviour
             countDownTimer -= Time.deltaTime;
             countDownText.text = countDownTimer.ToString("F0");     // Decimals are not displayed
         }
+
+        if (inCooldown)
+        {
+            shotIndicator.fillAmount += 1 / fireRate * Time.deltaTime;
+
+            if(shotIndicator.fillAmount >= 1)
+            {
+                inCooldown = false;
+                shotIndicator.fillAmount = 1;
+            }
+        }
     }
 
     // Starts the initial count down
@@ -37,6 +57,7 @@ public class UIManager : MonoBehaviour
         countDownStarted = true;
         timeLeftText.enabled = false;
         timerText.enabled = false;
+        shotIndicator.enabled = false;
     }
 
     private IEnumerator EndCountDown()
@@ -47,6 +68,7 @@ public class UIManager : MonoBehaviour
         countDownText.enabled = false;
         timeLeftText.enabled = true;
         timerText.enabled = true;
+        shotIndicator.enabled = true;
     }
 
     public void UpdateTimeLeft(int time)
@@ -62,5 +84,12 @@ public class UIManager : MonoBehaviour
             LoseScreen.SetActive(true);
 
         playerArea.SetActive(false);
+    }
+
+    public void StartCd(float amount)
+    {
+        shotIndicator.fillAmount = 0f;
+        fireRate = amount;
+        inCooldown = true;
     }
 }

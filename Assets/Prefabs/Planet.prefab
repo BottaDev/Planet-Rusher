@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8781571459463682708}
   - component: {fileID: 8781571459463682709}
   - component: {fileID: 7148567171120179906}
+  - component: {fileID: 1938408086}
   m_Layer: 9
   m_Name: Planet
   m_TagString: Untagged
@@ -121,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c62b8383731280449b86d60cd5b42fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 1.5
-  radius: 50
+  spawnTime: 1
+  radius: 55
   meteorPrefab: {fileID: 3263823604429632012, guid: ea3f3c12c1d0d25429ce0adb49467459,
     type: 3}
 --- !u!114 &7148567171120179906
@@ -140,3 +141,18 @@ MonoBehaviour:
   timeToSpawn: 15
   currentTimeToSpawn: 0
   powerUp: {fileID: 4505110145202000526, guid: 5230b540a6fc7db4d9ac1ee6f89c5368, type: 3}
+--- !u!114 &1938408086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781571459463682715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f6a1ed494c5634798148dd671b77ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 7
+  minePrefab: {fileID: 5781721364710754985, guid: 139e140b25f7b004d915b9db80a75d96,
+    type: 3}
