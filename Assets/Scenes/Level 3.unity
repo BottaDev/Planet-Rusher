@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efb721cd8de8f4409f7a11f78e5cac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 90
+  levelTime: 110
   endGameCamera: {fileID: 6428163}
 --- !u!114 &765443128
 MonoBehaviour:
