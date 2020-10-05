@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5781721364710754982}
   - component: {fileID: 5781721364710754979}
   - component: {fileID: 5781721364710754978}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,4 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f0930b43fe9ba4aa339e2abfe18162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHp: 1
   speed: 4
