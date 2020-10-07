@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BurbleProtection : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private PlayerEntity player;
+
+    private void Awake()
     {
-        if (collision.gameObject.layer == 10)
+        player = gameObject.GetComponentInParent<PlayerEntity>();
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
         {
             Destroy(collision.gameObject);
-            PlayerEntity player = collision.gameObject.GetComponent<PlayerEntity>();
             player.DesactiveInvulnerability();
         }
     }
