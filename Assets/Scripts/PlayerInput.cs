@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
 
     private float currentFireRate = 0;
     private UIManager uiManager;
+    public Animator animator;
 
     private void Awake()
     {
@@ -27,6 +28,16 @@ public class PlayerInput : MonoBehaviour
     private void Update()
     {
         inputX = Input.GetAxisRaw("Horizontal");
+
+        if (inputX < 0)
+            animator.SetFloat("Left", 1);
+        else if (inputX > 0)
+            animator.SetFloat("Right", 1);
+        else
+        {
+            animator.SetFloat("Left", 0);
+            animator.SetFloat("Right", 0);
+        }
 
         Vector3 targetMoveAmount = Vector3.forward * playerEntity.movementSpeed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
