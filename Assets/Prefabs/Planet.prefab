@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnerName: Power Up
-  spawnTime: 30
+  spawnTime: 40
   objectToSpawn: {fileID: 4505110145202000526, guid: 5230b540a6fc7db4d9ac1ee6f89c5368,
     type: 3}
   radius: 0
