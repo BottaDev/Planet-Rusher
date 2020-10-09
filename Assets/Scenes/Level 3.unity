@@ -540,31 +540,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7296155153778325117}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &978468565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6722673902853070549, guid: af33c82486fe34e45aab2ddb3801d2ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 6722673901774435900}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &978468571
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978468565}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e4683899d07dbe3488e608d2b0dda904, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1357730909 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7296155155135390240, guid: 3ce873db26bc5c743ab22667f6049684,
@@ -845,18 +820,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6722673902853070546, guid: af33c82486fe34e45aab2ddb3801d2ed,
-        type: 3}
-      propertyPath: timeInv
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6722673902853070549, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3407658305033626122, guid: af33c82486fe34e45aab2ddb3801d2ed, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af33c82486fe34e45aab2ddb3801d2ed, type: 3}
 --- !u!1001 &7296155153778325117
 PrefabInstance:
@@ -1005,6 +974,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: size
