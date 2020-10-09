@@ -282,7 +282,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 2
+          m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1965803848652925005
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1965803848652925005}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1965803848652925005}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1965803848652925005}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 31.45
+  m_fontSize: 11.2
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
