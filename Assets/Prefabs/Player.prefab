@@ -318,10 +318,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6722673902853070545}
-  - component: {fileID: 6722673902853070550}
   - component: {fileID: 6722673902853070547}
   - component: {fileID: 6722673902853070546}
   - component: {fileID: 6722673902853070540}
+  - component: {fileID: 8405084433995660384}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -347,20 +347,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &6722673902853070550
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722673902853070549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.7245289
-  m_Height: 3.4490578
-  m_Direction: 1
-  m_Center: {x: 0.09134483, y: 0.09897435, z: -0.031677365}
 --- !u!54 &6722673902853070547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -396,7 +382,6 @@ MonoBehaviour:
     type: 3}
   spawnPosition: {fileID: 6722673901426412430}
   sphere: {fileID: 7983806517536707314}
-  timeInv: 5
 --- !u!114 &6722673902853070540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +395,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3407658305033626122}
+--- !u!65 &8405084433995660384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722673902853070549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.12, y: 1.4603751, z: 2.26}
+  m_Center: {x: 0, y: -0.29981244, z: 0}
 --- !u!1 &7983806517536707314
 GameObject:
   m_ObjectHideFlags: 0
