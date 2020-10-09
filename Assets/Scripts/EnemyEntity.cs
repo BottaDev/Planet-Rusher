@@ -46,7 +46,7 @@ public class EnemyEntity : FakeGravityBody
             Destroy(collision.gameObject);
             KillEnemy();
         }
-        else if (collision.gameObject.layer == 11)
+        else if (collision.gameObject.layer == 11 || collision.gameObject.layer == 8)
             KillEnemy();
     }
 }

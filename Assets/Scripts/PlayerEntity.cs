@@ -13,8 +13,6 @@ public class PlayerEntity : FakeGravityBody
     public Transform spawnPosition;
     [Header("PowerUp")]
     public GameObject sphere;
-    public float timeInv;
-    private float currentTimeInv;
 
     private void KillPlayer()
     {
@@ -24,24 +22,16 @@ public class PlayerEntity : FakeGravityBody
         Destroy(gameObject);
     }
 
-    private void Update()
-    {
-        currentTimeInv -= Time.deltaTime;
-
-        if (currentTimeInv <= 0)
-            DesactiveInvulnerability();
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 10)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
             KillPlayer();
     }
 
     public void ActiveInvulnerability()
     {
         sphere.SetActive(true);
-        currentTimeInv = timeInv;
     }
 
     public void DesactiveInvulnerability()

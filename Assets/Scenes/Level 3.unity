@@ -820,11 +820,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6722673902853070546, guid: af33c82486fe34e45aab2ddb3801d2ed,
-        type: 3}
-      propertyPath: timeInv
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6722673902853070549, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
       propertyPath: m_Name
@@ -979,6 +974,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: size
