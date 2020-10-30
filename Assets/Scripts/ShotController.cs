@@ -23,7 +23,7 @@ public class ShotController : FakeGravityBody
     {
         if (collision.gameObject.layer == 11)
             collision.gameObject.GetComponent<EnemyEntity>().TakeDamage();
-        else if (collision.gameObject.layer == 10)
+        else if (collision.gameObject.layer == 10 || collision.gameObject.layer == 12 || collision.gameObject.layer == 13)
             Destroy(collision.gameObject);
 
         if (collision.gameObject.layer != 9)
