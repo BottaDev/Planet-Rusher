@@ -13,7 +13,7 @@ public class BurbleProtection : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
         {
             Destroy(collision.gameObject);
             player.DesactiveInvulnerability();
