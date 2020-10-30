@@ -29,8 +29,6 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-
         Vector3 targetMoveAmount = Vector3.forward * playerEntity.movementSpeed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
 
@@ -42,6 +40,8 @@ public class PlayerInput : MonoBehaviour
 #endif
 
 #if UNITY_STANDALONE
+        inputX = Input.GetAxisRaw("Horizontal");
+
         if (inputX < 0)
             animator.SetFloat("Left", 1);
         else if (inputX > 0)
