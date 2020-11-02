@@ -6,9 +6,9 @@ public class EnemyShooterEntity : EnemyEntity
 {
     public float fireRate = 3f;
     public GameObject shotPrefab;
-    public Transform spawnPosition;
+    public Transform[] spawnPosition;
 
-    private float currentFireRate = 1f;
+    protected float currentFireRate = 1f;
 
     protected override void Update()
     {
@@ -20,9 +20,9 @@ public class EnemyShooterEntity : EnemyEntity
             currentFireRate -= Time.deltaTime;
     }
 
-    private void Shot()
+    protected virtual void Shot()
     {
-        Instantiate(shotPrefab, spawnPosition.position, spawnPosition.rotation);
+        Instantiate(shotPrefab, spawnPosition[0].position, spawnPosition[0].rotation);
 
         currentFireRate = fireRate;
     }
