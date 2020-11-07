@@ -366,6 +366,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7296155153778325117}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &415481007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6722673902853070540, guid: af33c82486fe34e45aab2ddb3801d2ed,
+    type: 3}
+  m_PrefabInstance: {fileID: 6722673901774435900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd12a91a3d9f2a42922a743db6fb4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &694136912 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5812619381540977031, guid: 3ce873db26bc5c743ab22667f6049684,
@@ -839,9 +851,54 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4971003514169209669, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 415481007}
+    - target: {fileID: 4971003514169209669, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SimulateRightPressedInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971003514169209669, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 415481007}
+    - target: {fileID: 4971003514169209669, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SimulateRightReleasedInput
+      objectReference: {fileID: 0}
     - target: {fileID: 5334735733971362885, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139370066592324178, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 415481007}
+    - target: {fileID: 6139370066592324178, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SimulateLeftPressedInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139370066592324178, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 415481007}
+    - target: {fileID: 6139370066592324178, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: onPointerUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SimulateLeftReleasedInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338129641539893197, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7296155153568300787, guid: 3ce873db26bc5c743ab22667f6049684,
