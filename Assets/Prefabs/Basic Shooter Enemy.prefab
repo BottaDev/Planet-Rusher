@@ -27,6 +27,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.22, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 5781721364710754981}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4613021887972132436
