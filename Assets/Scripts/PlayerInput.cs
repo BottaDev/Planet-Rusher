@@ -26,7 +26,6 @@ public class PlayerInput : MonoBehaviour
         uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
     }
 
-
     private void Update()
     {
         Vector3 targetMoveAmount = Vector3.forward * playerEntity.movementSpeed;
