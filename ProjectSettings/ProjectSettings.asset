@@ -734,10 +734,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: a6ed4d33-829e-411b-a55e-9dcc7f0be0dc
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Planet Rusher
+  organizationId: sorfon
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
