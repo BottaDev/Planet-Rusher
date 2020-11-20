@@ -6,7 +6,6 @@ public class PowerUP : FakeGravityBody
 {
     public Animator animator;
     private SpawnPowerUp powerUp;
-    public AudioSource audioSource;
 
     public override void Start()
     {
@@ -20,7 +19,6 @@ public class PowerUP : FakeGravityBody
         {
             PlayerEntity player = collision.gameObject.GetComponent<PlayerEntity>();
             player.ActiveInvulnerability();
-            audioSource.Play();
             powerUp.isSpawned = false;
             powerUp.isActived = true;
             Destroy(gameObject);

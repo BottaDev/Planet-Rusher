@@ -10,7 +10,6 @@ public class EnemyEntity : FakeGravityBody
     protected int currentHp;
 
     public Animator animator;
-    public AudioSource audioSource;
 
     public override void Awake()
     {
@@ -39,7 +38,6 @@ public class EnemyEntity : FakeGravityBody
 
     protected void KillEnemy()
     {
-        audioSource.Play();
         Destroy(gameObject);
     }
 
