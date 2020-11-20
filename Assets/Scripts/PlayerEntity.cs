@@ -32,7 +32,7 @@ public class PlayerEntity : FakeGravityBody
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
             KillPlayer();
     }
 

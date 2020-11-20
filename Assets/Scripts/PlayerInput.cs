@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 moveAmount;
     private Vector3 smoothMoveVelocity;
     private Rigidbody rb;
-    [SerializeField]private float inputX;
+    private float inputX;
     private bool bulletFired = false;
 
     private float currentFireRate = 0;
@@ -31,16 +31,6 @@ public class PlayerInput : MonoBehaviour
         Vector3 targetMoveAmount = Vector3.forward * playerEntity.movementSpeed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
 
-#if UNITY_ANDROID
-        if (bulletFired)
-            currentFireRate -= Time.deltaTime;
-        else
-            bulletFired = false;
-#endif
-
-#if UNITY_STANDALONE
-        inputX = Input.GetAxisRaw("Horizontal");
-
         if (inputX < 0)
             animator.SetFloat("Left", 1);
         else if (inputX > 0)
@@ -50,6 +40,16 @@ public class PlayerInput : MonoBehaviour
             animator.SetFloat("Left", 0);
             animator.SetFloat("Right", 0);
         }
+
+#if UNITY_ANDROID
+        if (bulletFired)
+            currentFireRate -= Time.deltaTime;
+        else
+            bulletFired = false;
+#endif
+
+#if UNITY_STANDALONE
+        inputX = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && currentFireRate <= 0)
             Shot();
