@@ -10,6 +10,8 @@ public class EnemyShooterEntity : EnemyEntity
 
     protected float currentFireRate = 1f;
 
+    public AudioSource audioSource;
+
     protected override void Update()
     {
         base.Update();
@@ -23,7 +25,7 @@ public class EnemyShooterEntity : EnemyEntity
     protected virtual void Shot()
     {
         Instantiate(shotPrefab, spawnPosition[0].position, spawnPosition[0].rotation);
-
+        audioSource.Play();
         currentFireRate = fireRate;
     }
 }

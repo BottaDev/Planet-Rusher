@@ -64,6 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHp: 1
   speed: 4
+  animator: {fileID: 1855052163804469275}
   rotationSpeed: 1
   detectionRadius: 4
   targetMask:
@@ -92,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8943442324010123615}
+  - component: {fileID: 1855052163804469275}
   m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
@@ -114,6 +116,25 @@ Transform:
   m_Father: {fileID: 5781721364710754981}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1855052163804469275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012763316060606116}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b057419aaab696447a149cebdc6e6dd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3888848050336955106
 PrefabInstance:
   m_ObjectHideFlags: 0
