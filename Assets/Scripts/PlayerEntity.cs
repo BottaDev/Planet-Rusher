@@ -13,6 +13,13 @@ public class PlayerEntity : FakeGravityBody
     public Transform spawnPosition;
     [Header("PowerUp")]
     public GameObject sphere;
+    private SpawnPowerUp powerUp;
+
+    public override void Start()
+    {
+        base.Start();
+        powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
+    }
 
     private void KillPlayer()
     {
@@ -37,5 +44,6 @@ public class PlayerEntity : FakeGravityBody
     public void DesactiveInvulnerability()
     {
         sphere.SetActive(false);
+        powerUp.isActived = false;
     }
 }

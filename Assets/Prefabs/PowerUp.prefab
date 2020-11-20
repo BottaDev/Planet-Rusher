@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4504b44b54933e548af45e9b80af5462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4918062007398198546}
 --- !u!54 &7945753449411409543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -86,6 +87,7 @@ GameObject:
   - component: {fileID: 4574195084108081706}
   - component: {fileID: 2553810388278004084}
   - component: {fileID: 7432586464262109781}
+  - component: {fileID: 4918062007398198546}
   m_Layer: 0
   m_Name: Model PU
   m_TagString: Untagged
@@ -153,3 +155,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &4918062007398198546
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819568070366616643}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0235652247ab8ae4a8f61fd45bf80d69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
