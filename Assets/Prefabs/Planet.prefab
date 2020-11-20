@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8781571459463682712}
   - component: {fileID: 8781571459463682708}
   - component: {fileID: 1620826779402203489}
-  - component: {fileID: 1178247765537636305}
   - component: {fileID: 7716276001025412291}
   - component: {fileID: 8410247813302714670}
+  - component: {fileID: 110909174006772113}
   m_Layer: 9
   m_Name: Planet
   m_TagString: Untagged
@@ -129,24 +129,8 @@ MonoBehaviour:
     type: 3}
   radius: 55
   useSphereRadius: 0
---- !u!114 &1178247765537636305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8781571459463682715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnerName: Power Up
-  spawnTime: 40
-  objectToSpawn: {fileID: 4505110145202000526, guid: 5230b540a6fc7db4d9ac1ee6f89c5368,
-    type: 3}
-  radius: 0
-  useSphereRadius: 1
+  currentSpawnTime: 3
+  sphereCollider: {fileID: 0}
 --- !u!114 &7716276001025412291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +149,8 @@ MonoBehaviour:
     type: 3}
   radius: 0
   useSphereRadius: 1
+  currentSpawnTime: 3
+  sphereCollider: {fileID: 0}
 --- !u!114 &8410247813302714670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +169,27 @@ MonoBehaviour:
     type: 3}
   radius: 0
   useSphereRadius: 1
+  currentSpawnTime: 3
+  sphereCollider: {fileID: 0}
+--- !u!114 &110909174006772113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781571459463682715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa77f9bb12fdf1c41b9d4164f8a6e4d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnerName: Power Up
+  spawnTime: 30
+  objectToSpawn: {fileID: 4505110145202000526, guid: 5230b540a6fc7db4d9ac1ee6f89c5368,
+    type: 3}
+  radius: 0
+  useSphereRadius: 1
+  currentSpawnTime: 3
+  sphereCollider: {fileID: 0}
+  isSpawned: 0
+  isActived: 0

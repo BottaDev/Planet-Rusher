@@ -9,6 +9,8 @@ public class EnemyEntity : FakeGravityBody
 
     protected int currentHp;
 
+    public Animator animator;
+
     public override void Awake()
     {
         base.Awake();

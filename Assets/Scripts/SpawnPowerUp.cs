@@ -4,31 +4,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SpawnPowerUp : MonoBehaviour
+public class SpawnPowerUp : BaseSpawner
 {
-    [Range(min: 0, max: 30)]
-    public float timeToSpawn;
-    public float currentTimeToSpawn;
-    public GameObject powerUp;
-    private SphereCollider sphereCollider;
+    public bool isSpawned = false;
+    public bool isActived;
 
-    void Start()
+    protected override void Start()
     {
-        sphereCollider = GetComponent<SphereCollider>();
-        currentTimeToSpawn = timeToSpawn;
+        base.Start();
+        currentSpawnTime = spawnTime;
     }
 
-    void Update()
+    protected override void Update()
     {
-        currentTimeToSpawn -= Time.deltaTime;
-        if (currentTimeToSpawn <= 0)
+        if(!isSpawned && !isActived)
+            currentSpawnTime -= Time.deltaTime;
+        if (currentSpawnTime <= 0)
+        {
+            isSpawned = true;
             SpawnPU();
+        }
     }
 
     private void SpawnPU()
     {
         Vector3 position = new Vector3(Random.insideUnitSphere.x * sphereCollider.radius, Random.insideUnitSphere.y * sphereCollider.radius, Random.insideUnitSphere.z * sphereCollider.radius);
-        Instantiate(powerUp, position, new Quaternion(0, Random.value, 0, 0));
-        currentTimeToSpawn = timeToSpawn;
+        Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
+        currentSpawnTime = spawnTime;
     }
 }

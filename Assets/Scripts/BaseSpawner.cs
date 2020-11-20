@@ -10,10 +10,10 @@ public class BaseSpawner : MonoBehaviour
     public float radius = 0f;
     public bool useSphereRadius = false;
 
-    private float currentSpawnTime = 3f;
-    private SphereCollider sphereCollider;
+    public float currentSpawnTime = 3f;
+    public SphereCollider sphereCollider;
 
-    protected void Start()
+    protected virtual void Start()
     {
         sphereCollider = GetComponent<SphereCollider>();
     }
