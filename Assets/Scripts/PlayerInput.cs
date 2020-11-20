@@ -15,6 +15,8 @@ public class PlayerInput : MonoBehaviour
     private UIManager uiManager;
     public Animator animator;
 
+    public AudioSource audioSource;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -68,6 +70,8 @@ public class PlayerInput : MonoBehaviour
 
     public void Shot()
     {
+        audioSource.Play();
+
         Instantiate(playerEntity.shotPrefab, playerEntity.spawnPosition.position, playerEntity.spawnPosition.rotation);
 
         currentFireRate = playerEntity.fireRate;
