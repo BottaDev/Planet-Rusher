@@ -228,7 +228,7 @@ MonoBehaviour:
   speed: 3
   animator: {fileID: 7744735256651093304}
   fireRate: 3
-  shotPrefab: {fileID: 5961488271603268197, guid: eed2e40bff6e9e5478a47cac040b7b2c,
+  shotPrefab: {fileID: 8236341462541940609, guid: 0e38ead89c3dc6b4d8073d674e4fa966,
     type: 3}
   spawnPosition:
   - {fileID: 3711270146535132310}
