@@ -10,6 +10,17 @@ public class FakeGravity : MonoBehaviour
     private float xRest;
     private float yRest;
     private float zRest;
+    private float startScaleX;
+    private float startScaleY;
+    private float startScaleZ;
+
+
+    private void Start()
+    {
+        startScaleX = transform.localScale.x;
+        startScaleY = transform.localScale.y;
+        startScaleZ = transform.localScale.z;
+    }
 
     private void Update()
     {
@@ -23,7 +34,7 @@ public class FakeGravity : MonoBehaviour
         yRest -= 0.5f * Time.deltaTime;
         zRest -= 0.5f * Time.deltaTime;
 
-        transform.localScale = new Vector3(50 + xRest, 50 + yRest, 50 + zRest);
+        transform.localScale = new Vector3(startScaleX + xRest, startScaleY + yRest, startScaleZ + zRest);
     }
 
     public void Attract(Transform objBody, Rigidbody rigBody)

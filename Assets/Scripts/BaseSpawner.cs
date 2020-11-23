@@ -10,8 +10,8 @@ public class BaseSpawner : MonoBehaviour
     public float radius = 0f;
     public bool useSphereRadius = false;
 
-    public float currentSpawnTime = 3f;
-    public SphereCollider sphereCollider;
+    protected float currentSpawnTime = 3f;
+    protected SphereCollider sphereCollider;
 
     protected virtual void Start()
     {
@@ -38,5 +38,12 @@ public class BaseSpawner : MonoBehaviour
         Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
 
         currentSpawnTime = spawnTime;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        if(!useSphereRadius)
+            Gizmos.DrawWireSphere(transform.position, radius);
     }
 }

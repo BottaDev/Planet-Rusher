@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   rotationSpeed: 2
-  fireRate: 10
+  fireRate: 5
   shotPrefab: {fileID: 8236341462541940609, guid: a5e233b3ae5135e45903eeb2553a7045,
     type: 3}
   spawnPosition: {fileID: 6722673901426412430}
@@ -626,6 +626,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: d597623c3c034c94182b00cf3bb561e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c0c1902af3c6d414d8d1ddfab98065f3, type: 2}
     - target: {fileID: -927199367670048503, guid: d597623c3c034c94182b00cf3bb561e2,
         type: 3}
       propertyPath: m_Name
