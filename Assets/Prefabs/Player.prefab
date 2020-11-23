@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6
   rotationSpeed: 2
-  fireRate: 10
+  fireRate: 5
   shotPrefab: {fileID: 8236341462541940609, guid: a5e233b3ae5135e45903eeb2553a7045,
     type: 3}
   spawnPosition: {fileID: 6722673901426412430}
