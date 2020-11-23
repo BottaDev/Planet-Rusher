@@ -5,9 +5,11 @@ using UnityEngine;
 public class BurbleProtection : MonoBehaviour
 {
     private PlayerEntity player;
+    private AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         player = gameObject.GetComponentInParent<PlayerEntity>();
     }
 
@@ -16,6 +18,7 @@ public class BurbleProtection : MonoBehaviour
         if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
         {
             Destroy(collision.gameObject);
+            audioSource.Play();
             player.DesactiveInvulnerability();
         }
     }
