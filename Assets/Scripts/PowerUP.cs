@@ -6,13 +6,11 @@ public class PowerUP : FakeGravityBody
 {
     public Animator animator;
     private SpawnPowerUp powerUp;
-    private AudioSource audioSource;
 
     public override void Start()
     {
         base.Start();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -21,7 +19,6 @@ public class PowerUP : FakeGravityBody
         {
             PlayerEntity player = collision.gameObject.GetComponent<PlayerEntity>();
             player.ActiveInvulnerability();
-            audioSource.Play();
             powerUp.isSpawned = false;
             powerUp.isActived = true;
             Destroy(gameObject);

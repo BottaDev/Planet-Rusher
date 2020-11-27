@@ -15,8 +15,6 @@ public class PlayerInput : MonoBehaviour
     private UIManager uiManager;
     public Animator animator;
 
-    public AudioSource audioSource;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -70,7 +68,8 @@ public class PlayerInput : MonoBehaviour
 
     public void Shot()
     {
-        audioSource.Play();
+        playerEntity.SetAudioClip(playerEntity.sounds[0]);
+        playerEntity.audioSource.Play();
 
         Instantiate(playerEntity.shotPrefab, playerEntity.spawnPosition.position, playerEntity.spawnPosition.rotation);
 
