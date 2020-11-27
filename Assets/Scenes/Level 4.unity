@@ -698,13 +698,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnerName: Shooter Enemy
-  spawnTime: 16
+  spawnTime: 20
   objectToSpawn: {fileID: 5781721364710754985, guid: 60232085823ba20468d1f37f45f448b0,
     type: 3}
   radius: 0
   useSphereRadius: 1
-  currentSpawnTime: 3
-  sphereCollider: {fileID: 0}
 --- !u!1 &2066614363
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +809,7 @@ PrefabInstance:
     - target: {fileID: 6722673902853070545, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.72
+      value: 30.75
       objectReference: {fileID: 0}
     - target: {fileID: 6722673902853070545, guid: af33c82486fe34e45aab2ddb3801d2ed,
         type: 3}
@@ -1122,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: minSize
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682709, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
@@ -1183,21 +1181,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781571459463682711, guid: 3e1d7c7df697850408db53e84cf2f867,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781571459463682711, guid: 3e1d7c7df697850408db53e84cf2f867,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781571459463682711, guid: 3e1d7c7df697850408db53e84cf2f867,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682715, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}

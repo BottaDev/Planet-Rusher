@@ -225,10 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8c670d4b29a494281e09ab4c6f876f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHp: 2
+  baseHp: 1
   speed: 3
   animator: {fileID: 7744735256651093304}
-  fireRate: 3
+  fireRate: 5
   shotPrefab: {fileID: 8236341462541940609, guid: 0e38ead89c3dc6b4d8073d674e4fa966,
     type: 3}
   spawnPosition:
