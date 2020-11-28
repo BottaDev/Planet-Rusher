@@ -64,6 +64,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHp: 1
   speed: 4
+  deathSound: {fileID: 1521640839244261131, guid: dbe5c99527daebb4ab6e0615e1e5ce7e,
+    type: 3}
   animator: {fileID: 1855052163804469275}
   rotationSpeed: 1
   detectionRadius: 4

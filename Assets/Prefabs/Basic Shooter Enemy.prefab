@@ -227,6 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHp: 1
   speed: 3
+  deathSound: {fileID: 1521640839244261131, guid: dbe5c99527daebb4ab6e0615e1e5ce7e,
+    type: 3}
   animator: {fileID: 7744735256651093304}
   fireRate: 5
   shotPrefab: {fileID: 8236341462541940609, guid: 0e38ead89c3dc6b4d8073d674e4fa966,

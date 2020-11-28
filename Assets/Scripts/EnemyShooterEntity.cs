@@ -8,7 +8,7 @@ public class EnemyShooterEntity : EnemyEntity
     public GameObject shotPrefab;
     public Transform[] spawnPosition;
 
-    protected float currentFireRate = 1f;
+    protected float currentFireRate = 2f;
 
     public AudioSource audioSource;
 

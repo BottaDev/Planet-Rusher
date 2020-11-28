@@ -6,6 +6,7 @@ public class EnemyEntity : FakeGravityBody
 {
     public int baseHp = 1;
     public float speed = 4f;
+    public GameObject deathSound;
 
     protected int currentHp;
 
@@ -38,6 +39,8 @@ public class EnemyEntity : FakeGravityBody
 
     protected void KillEnemy()
     {
+        GameObject soundObj = Instantiate(deathSound, transform.position, transform.rotation);
+        Destroy(soundObj, 1f);
         Destroy(gameObject);
     }
 
