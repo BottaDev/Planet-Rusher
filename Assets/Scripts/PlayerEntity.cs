@@ -29,6 +29,8 @@ public class PlayerEntity : FakeGravityBody
 
     private void KillPlayer()
     {
+        CreateDeathEffect();
+
         LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         levelManager.WinLoseGame(false);
 

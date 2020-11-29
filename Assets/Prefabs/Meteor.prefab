@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1bdde659bbbc5548aac7d3087c90c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 168542, guid: 463c6255610d43d4f9c8a5f267cb59b4, type: 3}
   obstacle: {fileID: 6711892565506654190, guid: 8f37b772b7abacf458448ad3bd58251f,
     type: 3}
 --- !u!1 &6513721004452396196
