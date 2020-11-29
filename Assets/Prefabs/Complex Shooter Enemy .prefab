@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d779523c487b02d44b754e91e90dfee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 168542, guid: cb5eed5f42d339c40be3d2816d1eb1ed, type: 3}
   baseHp: 1
   speed: 2
   deathSound: {fileID: 1521640839244261131, guid: dbe5c99527daebb4ab6e0615e1e5ce7e,

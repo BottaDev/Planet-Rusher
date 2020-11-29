@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf98ee2f5e05b04892607b7b13ce23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 168542, guid: cb5eed5f42d339c40be3d2816d1eb1ed, type: 3}
   baseHp: 1
   speed: 4
   deathSound: {fileID: 1521640839244261131, guid: dbe5c99527daebb4ab6e0615e1e5ce7e,

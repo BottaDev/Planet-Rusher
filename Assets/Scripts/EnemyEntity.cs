@@ -39,19 +39,17 @@ public class EnemyEntity : FakeGravityBody
 
     protected void KillEnemy()
     {
+        CreateDeathEffect();
+
         GameObject soundObj = Instantiate(deathSound, transform.position, transform.rotation);
         Destroy(soundObj, 1f);
+
         Destroy(gameObject);
     }
 
     protected void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 10)
-        {
-            Destroy(collision.gameObject);
-            KillEnemy();
-        }
-        else if (collision.gameObject.layer == 11 || collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 8)
             KillEnemy();
     }
 }

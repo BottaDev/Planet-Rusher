@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6711892565506654178}
   - component: {fileID: 6711892565506654189}
   - component: {fileID: 5243141026566838094}
-  - component: {fileID: -1858750769323694111}
+  - component: {fileID: 4744382094861656697}
   m_Layer: 10
   m_Name: Obstacle
   m_TagString: Untagged
@@ -173,7 +173,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-1858750769323694111
+--- !u!114 &4744382094861656697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,9 +182,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6711892565506654190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7352d1c28b12755499823f62d818985b, type: 3}
+  m_Script: {fileID: 11500000, guid: 33185ab9e8ffd7e42b74930dc82c6fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 168542, guid: 463c6255610d43d4f9c8a5f267cb59b4, type: 3}
+  maskToDestroy:
+    serializedVersion: 2
+    m_Bits: 30720
 --- !u!1001 &7813668452716272665
 PrefabInstance:
   m_ObjectHideFlags: 0

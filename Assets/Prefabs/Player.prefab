@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5ee2134595f874483dd8328d56c433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 168542, guid: 87aaf2cda9dfb384c9156ca24f90774b, type: 3}
   movementSpeed: 6
   rotationSpeed: 2
   fireRate: 5
