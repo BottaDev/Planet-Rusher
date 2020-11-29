@@ -336,6 +336,11 @@ MonoBehaviour:
     type: 3}
   spawnPosition: {fileID: 6722673901426412430}
   sphere: {fileID: 7983806517536707314}
+  sounds:
+  - {fileID: 8300000, guid: d958cdd60b6f54449a97a52fac6fae12, type: 3}
+  - {fileID: 8300000, guid: 91be1954342c8a741bd30abe93b3d890, type: 3}
+  - {fileID: 8300000, guid: c517c05a27e234e4ea58ca8957249b80, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &6722673902853070540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 614408686484280280}
-  audioSource: {fileID: 8777228169324305754}
 --- !u!65 &8405084433995660384
 BoxCollider:
   m_ObjectHideFlags: 0

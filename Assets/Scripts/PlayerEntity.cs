@@ -13,12 +13,18 @@ public class PlayerEntity : FakeGravityBody
     public Transform spawnPosition;
     [Header("PowerUp")]
     public GameObject sphere;
+    [Header("Audio Settings")]    
+    public AudioClip[] sounds;
+
+    [HideInInspector]
+    public AudioSource audioSource;
     private SpawnPowerUp powerUp;
 
     public override void Start()
     {
         base.Start();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void KillPlayer()
@@ -38,12 +44,21 @@ public class PlayerEntity : FakeGravityBody
 
     public void ActiveInvulnerability()
     {
+        SetAudioClip(sounds[1]);
+        audioSource.Play();
         sphere.SetActive(true);
     }
 
     public void DesactiveInvulnerability()
     {
+        SetAudioClip(sounds[2]);
+        audioSource.Play();
         sphere.SetActive(false);
         powerUp.isActived = false;
+    }
+
+    public void SetAudioClip(AudioClip clip)
+    {
+        audioSource.clip = clip;
     }
 }

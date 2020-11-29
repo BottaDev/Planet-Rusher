@@ -703,6 +703,7 @@ MonoBehaviour:
     type: 3}
   radius: 0
   useSphereRadius: 1
+  currentSpawnTime: 5
 --- !u!1 &2066614363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnTime
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: currentSpawnTime
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}

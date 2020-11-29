@@ -8,6 +8,7 @@ public class SpawnPowerUp : BaseSpawner
 {
     public bool isSpawned = false;
     public bool isActived;
+    public AudioSource audioSource;
 
     protected override void Start()
     {
@@ -30,6 +31,7 @@ public class SpawnPowerUp : BaseSpawner
     {
         Vector3 position = new Vector3(Random.insideUnitSphere.x * sphereCollider.radius, Random.insideUnitSphere.y * sphereCollider.radius, Random.insideUnitSphere.z * sphereCollider.radius);
         Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
+        audioSource.Play();
         currentSpawnTime = spawnTime;
     }
 }

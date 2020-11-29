@@ -10,6 +10,7 @@ public class BaseSpawner : MonoBehaviour
     public float radius = 0f;
     public bool useSphereRadius = false;
 
+    [SerializeField]
     protected float currentSpawnTime = 3f;
     protected SphereCollider sphereCollider;
 

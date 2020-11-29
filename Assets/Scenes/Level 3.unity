@@ -1066,6 +1066,11 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 110909174006772113, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: currentSpawnTime
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: spawnTime
@@ -1090,6 +1095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnTime
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: currentSpawnTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
