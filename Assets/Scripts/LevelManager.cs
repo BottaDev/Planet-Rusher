@@ -45,15 +45,18 @@ public class LevelManager : MonoBehaviour
 
     public void WinLoseGame(bool playerWon)
     {
+        uiManager.ShowWinLoseScreen(playerWon);
+
         if (playerWon && !gameEnded)
         {
-            uiManager.ShowWinLoseScreen(playerWon);
-
             PlayerInput player = GameObject.Find("Player").GetComponent<PlayerInput>();
             player.enabled = false;
-        }
-        else if (!playerWon && !gameEnded)
-            uiManager.ShowWinLoseScreen(playerWon);
+
+            if (GameManager.instance != null)
+                GameManager.instance.SaveData();
+            else
+                Debug.LogError("No GameManager found. Could not save the game.");
+        }   
 
         endGameCamera.SetActive(true);
         gameEnded = true;
