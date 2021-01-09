@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [SerializeField]
-    private DataSave dataSave;
+    public DataSave dataSave;
     [SerializeField]
     private string savePath = "/Save.sav";
     private string sceneName;
