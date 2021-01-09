@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelSelector : MonoBehaviour
 {
     public Button playButton;
+    public TMP_Text buttonText;
     public GameObject lockedText;
 
     [Range(min: 1, max: 4 )]
@@ -29,6 +31,7 @@ public class LevelSelector : MonoBehaviour
             case 1:
                 lockedText.SetActive(false);
                 playButton.interactable = true;
+                buttonText.color = Color.white;
                 break;
 
             case 2:
@@ -36,11 +39,13 @@ public class LevelSelector : MonoBehaviour
                 {
                     lockedText.SetActive(false);
                     playButton.interactable = true;
+                    buttonText.color = Color.white;
                 }
                 else
                 {
                     lockedText.SetActive(true);
                     playButton.interactable = false;
+                    buttonText.color = Color.black;
                 }
                 break;
 
@@ -49,11 +54,13 @@ public class LevelSelector : MonoBehaviour
                 {
                     lockedText.SetActive(false);
                     playButton.interactable = true;
+                    buttonText.color = Color.white;
                 }
                 else
                 {
                     lockedText.SetActive(true);
                     playButton.interactable = false;
+                    buttonText.color = Color.black;
                 }
                 break;
 
@@ -62,14 +69,15 @@ public class LevelSelector : MonoBehaviour
                 {
                     lockedText.SetActive(false);
                     playButton.interactable = true;
+                    buttonText.color = Color.white;
                 }
                 else
                 {
                     lockedText.SetActive(true);
                     playButton.interactable = false;
+                    buttonText.color = Color.black;
                 }
                 break;
         }
-        
     }
 }
