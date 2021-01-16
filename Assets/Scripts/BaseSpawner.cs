@@ -14,6 +14,9 @@ public class BaseSpawner : MonoBehaviour
     protected float currentSpawnTime = 3f;
     protected SphereCollider sphereCollider;
 
+    public Vector3 center;
+    public Vector3 size;
+
     protected virtual void Start()
     {
         sphereCollider = GetComponent<SphereCollider>();
@@ -31,12 +34,38 @@ public class BaseSpawner : MonoBehaviour
     {
         Vector3 position;
 
-        if (useSphereRadius)
-            position = new Vector3(Random.insideUnitSphere.x * sphereCollider.radius, Random.insideUnitSphere.y * sphereCollider.radius, Random.insideUnitSphere.z * sphereCollider.radius);
-        else
-            position = new Vector3(Random.insideUnitSphere.x * radius, Random.insideUnitSphere.y * radius, Random.insideUnitSphere.z * radius);
+        bool canSpawn = false;
 
-        Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
+        while (!canSpawn)
+        {
+            if (useSphereRadius)
+                position = new Vector3(Random.insideUnitSphere.x * sphereCollider.radius, Random.insideUnitSphere.y * sphereCollider.radius, Random.insideUnitSphere.z * sphereCollider.radius);
+            else
+                position = new Vector3(Random.insideUnitSphere.x * radius, Random.insideUnitSphere.y * radius, Random.insideUnitSphere.z * radius);
+
+            Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
+
+            GameObject tempObj = new GameObject("temporary cube with collider (SpawnLocationValid)");
+            tempObj.transform.position = position;
+            var bCol = tempObj.AddComponent<SphereCollider>();
+            bCol.isTrigger = true;
+            bCol.radius = 1.5f;
+
+            Collider[] colls = Physics.OverlapSphere(position, bCol.radius, 10);
+
+            if (colls.Length == 0)
+            {
+                print("lo hizo");
+                GameObject.Destroy(bCol);
+                canSpawn = true;
+            }
+            else
+            {
+                print("no spawneo");
+                canSpawn = false;
+                GameObject.Destroy(bCol);
+            }
+        }
 
         currentSpawnTime = spawnTime;
     }
