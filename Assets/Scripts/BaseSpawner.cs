@@ -56,14 +56,14 @@ public class BaseSpawner : MonoBehaviour
             if (colls.Length == 0)
             {
                 print("lo hizo");
-                GameObject.Destroy(bCol);
+                Destroy(tempObj);
                 canSpawn = true;
             }
             else
             {
                 print("no spawneo");
                 canSpawn = false;
-                GameObject.Destroy(bCol);
+                Destroy(tempObj);
             }
         }
 
