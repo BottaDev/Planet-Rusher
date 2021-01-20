@@ -11,7 +11,7 @@ public class PowerUP : FakeGravityBody
     public override void Start()
     {
         base.Start();
-        uiManager = GetComponent<UIManager>();
+        uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
     }
 

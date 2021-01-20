@@ -85,7 +85,11 @@ public class UIManager : MonoBehaviour
     public void UpdateTimeLeft(int time)
     {
         timerText.text = time.ToString();
-        powerUpTimerText.text = time.ToString();
+    }
+
+    public void UpdateTimePowerUpLeft(int time)
+    {
+        powerUpTimeLeftText.text = time.ToString();
     }
 
     public void ShowWinLoseScreen(bool playerWon)

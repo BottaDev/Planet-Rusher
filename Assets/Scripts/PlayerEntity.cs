@@ -26,7 +26,7 @@ public class PlayerEntity : FakeGravityBody
         base.Start();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
         audioSource = GetComponent<AudioSource>();
-        uiManager = GetComponent<UIManager>();
+        uiManager =GameObject.Find("LevelManager").GetComponent<UIManager>();
     }
 
     private void KillPlayer()

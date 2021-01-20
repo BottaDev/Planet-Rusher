@@ -23,7 +23,7 @@ public class SpawnPowerUp : BaseSpawner
         if(!isSpawned && !isActived)
         {
             currentSpawnTime -= Time.deltaTime;
-            uiManager.UpdateTimeLeft((int)currentSpawnTime);
+            uiManager.UpdateTimePowerUpLeft((int)currentSpawnTime);
         }
         if (currentSpawnTime <= 0)
         {
