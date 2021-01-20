@@ -6,10 +6,12 @@ public class PowerUP : FakeGravityBody
 {
     public Animator animator;
     private SpawnPowerUp powerUp;
+    private UIManager uiManager;
 
     public override void Start()
     {
         base.Start();
+        uiManager = GetComponent<UIManager>();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
     }
 
@@ -21,6 +23,8 @@ public class PowerUP : FakeGravityBody
             player.ActiveInvulnerability();
             powerUp.isSpawned = false;
             powerUp.isActived = true;
+            uiManager.powerUpSpawned.enabled = false;
+            uiManager.powerUpActived.enabled = true;
             Destroy(gameObject);
         }
     }

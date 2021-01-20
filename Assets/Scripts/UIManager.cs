@@ -12,6 +12,11 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI countDownText;
     public GameObject playerArea;
     public Image shotIndicator;
+    public TextMeshProUGUI powerUpTimerText;
+    public TextMeshProUGUI powerUpTimeLeftText;
+    public TextMeshProUGUI powerUpSpawned;
+    public TextMeshProUGUI powerUpActived;
+
     [Header("Screens")]
     public GameObject WinScreen;
     public GameObject LoseScreen;
@@ -58,6 +63,10 @@ public class UIManager : MonoBehaviour
         timeLeftText.enabled = false;
         timerText.enabled = false;
         shotIndicator.enabled = false;
+        powerUpTimeLeftText.enabled = false;
+        powerUpTimerText.enabled = false;
+        powerUpActived.enabled = false;
+        powerUpSpawned.enabled = false;
     }
 
     private IEnumerator EndCountDown()
@@ -69,11 +78,14 @@ public class UIManager : MonoBehaviour
         timeLeftText.enabled = true;
         timerText.enabled = true;
         shotIndicator.enabled = true;
+        powerUpTimerText.enabled = true;
+        powerUpTimeLeftText.enabled = true;
     }
 
     public void UpdateTimeLeft(int time)
     {
         timerText.text = time.ToString();
+        powerUpTimerText.text = time.ToString();
     }
 
     public void ShowWinLoseScreen(bool playerWon)

@@ -19,12 +19,14 @@ public class PlayerEntity : FakeGravityBody
     [HideInInspector]
     public AudioSource audioSource;
     private SpawnPowerUp powerUp;
+    private UIManager uiManager;
 
     public override void Start()
     {
         base.Start();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
         audioSource = GetComponent<AudioSource>();
+        uiManager = GetComponent<UIManager>();
     }
 
     private void KillPlayer()
@@ -56,6 +58,8 @@ public class PlayerEntity : FakeGravityBody
         SetAudioClip(sounds[2]);
         audioSource.Play();
         sphere.SetActive(false);
+        uiManager.powerUpActived.enabled = false;
+        uiManager.powerUpTimeLeftText.enabled = true;
         powerUp.isActived = false;
     }
 
