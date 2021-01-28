@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour
     private float inputX;
     private bool bulletFired = false;
 
-    private float currentFireRate = 0;
+    public float currentFireRate = 0;
     private UIManager uiManager;
     public Animator animator;
 
@@ -107,5 +107,11 @@ public class PlayerInput : MonoBehaviour
             bulletFired = true;
             Shot();
         }
+    }
+
+    public void ApplyFastCD()
+    {
+        currentFireRate = currentFireRate / 2;
+        uiManager.shootHit = true;
     }
 }
