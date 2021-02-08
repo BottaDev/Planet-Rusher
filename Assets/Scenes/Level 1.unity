@@ -1202,6 +1202,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: props.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: propsToSpawn
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682708, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: minSize
@@ -1272,4 +1282,5 @@ PrefabInstance:
     - {fileID: 7716276001025412291, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
     - {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
     - {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
+    - {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}

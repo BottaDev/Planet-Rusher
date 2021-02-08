@@ -16,7 +16,10 @@ GameObject:
   - component: {fileID: 1620826779402203489}
   - component: {fileID: 7716276001025412291}
   - component: {fileID: 8410247813302714670}
+  - component: {fileID: 1244446788116364689}
   - component: {fileID: 110909174006772113}
+  - component: {fileID: 1450644966139205714}
+  - component: {fileID: 5952650483425821603}
   - component: {fileID: 1019207837381285665}
   m_Layer: 9
   m_Name: Planet
@@ -124,14 +127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerName: Meteors
+  spawnerName: Meteor
   spawnTime: 3
   objectToSpawn: {fileID: 3263823604429632012, guid: ea3f3c12c1d0d25429ce0adb49467459,
     type: 3}
   radius: 55
   useSphereRadius: 0
   currentSpawnTime: 3
-  sphereCollider: {fileID: 0}
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
 --- !u!114 &7716276001025412291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,14 +148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerName: Basic Enemy
+  spawnerName: Basic Enemy
   spawnTime: 7
   objectToSpawn: {fileID: 5781721364710754985, guid: 139e140b25f7b004d915b9db80a75d96,
     type: 3}
   radius: 0
   useSphereRadius: 1
   currentSpawnTime: 3
-  sphereCollider: {fileID: 0}
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
 --- !u!114 &8410247813302714670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,14 +169,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerName: Shooter Enemy
+  spawnerName: Basic Shooter Enemy
   spawnTime: 12
   objectToSpawn: {fileID: 5781721364710754985, guid: 60232085823ba20468d1f37f45f448b0,
     type: 3}
   radius: 0
   useSphereRadius: 1
   currentSpawnTime: 3
-  sphereCollider: {fileID: 0}
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
+--- !u!114 &1244446788116364689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781571459463682715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerName: Follower Enemy
+  spawnTime: 25
+  objectToSpawn: {fileID: 5781721364710754985, guid: 6065572b9792fa04299a2c37a8379b33,
+    type: 3}
+  radius: 0
+  useSphereRadius: 1
+  currentSpawnTime: 3
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
 --- !u!114 &110909174006772113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,17 +211,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa77f9bb12fdf1c41b9d4164f8a6e4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerName: Power Up
+  spawnerName: Power Up
   spawnTime: 30
   objectToSpawn: {fileID: 4505110145202000526, guid: 5230b540a6fc7db4d9ac1ee6f89c5368,
     type: 3}
   radius: 0
   useSphereRadius: 1
   currentSpawnTime: 3
-  sphereCollider: {fileID: 0}
+  center: {x: 0, y: 0, z: 0}
+  size: {x: 0, y: 0, z: 0}
   isSpawned: 0
   isActived: 0
   audioSource: {fileID: 1019207837381285665}
+--- !u!114 &1450644966139205714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781571459463682715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e936b8f74eab3ac4a8906b93b4361557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerName: Indestructible Obstacles
+  distanceFromPlayer: 20
+  propsToSpawn: 5
+  props:
+  - {fileID: 6154328818166247912, guid: 61ad1d6db8ee5854e8bf2c1686655146, type: 3}
+  - {fileID: 1774445302299071229, guid: a969a85650d98844c835106fb0d88e57, type: 3}
+  - {fileID: 2436367329116075379, guid: 2e879590bab02044891bc1f2a90908b0, type: 3}
+  - {fileID: 1278108263194046517, guid: 8cde73c338a5aa848abe4f480e67ef3b, type: 3}
+--- !u!114 &5952650483425821603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781571459463682715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e936b8f74eab3ac4a8906b93b4361557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerName: Small Rocks
+  distanceFromPlayer: 1
+  propsToSpawn: 70
+  props:
+  - {fileID: 3458922426376781897, guid: c3716acd040765e4eb051e4db80a8431, type: 3}
+  - {fileID: 4399578865328491466, guid: a328206186e82d14b97a61e20fbb40fb, type: 3}
 --- !u!82 &1019207837381285665
 AudioSource:
   m_ObjectHideFlags: 0

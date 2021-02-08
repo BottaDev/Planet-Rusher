@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseSpawner : MonoBehaviour
 {
-    public string SpawnerName = "";
+    public string spawnerName = "";
     public float spawnTime;
     public GameObject objectToSpawn;
     public float radius = 0f;
@@ -43,8 +43,6 @@ public class BaseSpawner : MonoBehaviour
             else
                 position = new Vector3(Random.insideUnitSphere.x * radius, Random.insideUnitSphere.y * radius, Random.insideUnitSphere.z * radius);
 
-            Instantiate(objectToSpawn, position, new Quaternion(0, Random.value, 0, 0));
-
             GameObject tempObj = new GameObject("temporary cube with collider (SpawnLocationValid)");
             tempObj.transform.position = position;
             var bCol = tempObj.AddComponent<SphereCollider>();
@@ -55,15 +53,17 @@ public class BaseSpawner : MonoBehaviour
 
             if (colls.Length == 0)
             {
-                print("lo hizo");
                 Destroy(tempObj);
+
+                Instantiate(objectToSpawn, position, new Quaternion(0, Random.Range(0, 361), 0, 0));
+
                 canSpawn = true;
             }
             else
             {
-                print("no spawneo");
-                canSpawn = false;
                 Destroy(tempObj);
+
+                canSpawn = false;
             }
         }
 

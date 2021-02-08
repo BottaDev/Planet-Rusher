@@ -525,7 +525,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.45
+  m_fontSize: 20.3
   m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 44.2
+  m_fontSize: 39.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16.35
+  m_fontSize: 14.75
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2009,12 +2009,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 110909174006772113, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1620826779402203489, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952650483425821603, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2268,7 +2283,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 16.15
+  m_fontSize: 14.65
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2566,7 +2581,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36.6
+  m_fontSize: 33.05
   m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 1

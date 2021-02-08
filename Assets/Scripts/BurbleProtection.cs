@@ -15,7 +15,11 @@ public class BurbleProtection : MonoBehaviour
     {
         if (collision.gameObject.layer == 10)
         {
-            collision.gameObject.GetComponent<Obstacle>().DestroyObstacle();
+            Obstacle obs = collision.gameObject.GetComponent<Obstacle>();
+
+            if (obs != null)
+                obs.DestroyObstacle();
+
             player.DesactiveInvulnerability();
         }
         else if (collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
