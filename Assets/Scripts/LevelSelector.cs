@@ -44,7 +44,6 @@ public class LevelSelector : MonoBehaviour
 
                 DisableProps();
                 levelProps[1].SetActive(true);
-                DisableProps();
                 break;
 
             case 3:
