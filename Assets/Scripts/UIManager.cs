@@ -21,14 +21,18 @@ public class UIManager : MonoBehaviour
     public GameObject WinScreen;
     public GameObject LoseScreen;
 
+    [HideInInspector]
+    public bool shootHit;
     private float countDownTimer = 3f;
     private bool countDownStarted = false;
     private bool inCooldown = false;
     private float fireRate;
+    private PlayerInput player;
 
     private void Start()
     {
         shotIndicator.fillAmount = 1f;
+        player = GameObject.Find("Player").GetComponent<PlayerInput>();
     }
 
     private void Update()
@@ -45,12 +49,14 @@ public class UIManager : MonoBehaviour
 
         if (inCooldown)
         {
-            shotIndicator.fillAmount += 1 / fireRate * Time.deltaTime;
+            //shotIndicator.fillAmount += 1 / fireRate * Time.deltaTime;
+            shotIndicator.fillAmount += !shootHit ? 1 / fireRate * Time.deltaTime : 1 / (fireRate / 2) * Time.deltaTime;
 
-            if(shotIndicator.fillAmount >= 1)
+            if (shotIndicator.fillAmount >= 1)
             {
                 inCooldown = false;
                 shotIndicator.fillAmount = 1;
+                shootHit = false;
             }
         }
     }

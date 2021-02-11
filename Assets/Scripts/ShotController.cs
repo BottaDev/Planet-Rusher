@@ -6,11 +6,12 @@ public class ShotController : FakeGravityBody
 {
     public float speed = 20f;
     public float timeToDestroy = 8f;
+    private PlayerInput player;
 
     public override void Start()
     {
         base.Start();
-
+        player = GameObject.Find("Player").GetComponent<PlayerInput>();
         Destroy(gameObject, timeToDestroy);
     }
 
@@ -22,7 +23,12 @@ public class ShotController : FakeGravityBody
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 11)
+        {
             collision.gameObject.GetComponent<EnemyEntity>().TakeDamage();
+            player.ApplyFastCD();
+        }
+        else if(collision.gameObject.layer == 10)
+            player.ApplyFastCD();
         else if (collision.gameObject.layer == 12 || collision.gameObject.layer == 13)
             Destroy(collision.gameObject);
 
