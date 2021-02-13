@@ -8,6 +8,8 @@ public class EnemyEntity : FakeGravityBody
     public float speed = 4f;
     public GameObject deathSound;
 
+    protected bool isFreezed = false;
+
     protected int currentHp;
 
     public Animator animator;
@@ -21,6 +23,9 @@ public class EnemyEntity : FakeGravityBody
 
     protected virtual void Update()
     {
+        if (isFreezed)
+            return;
+
         Move();
     }
 
@@ -45,6 +50,20 @@ public class EnemyEntity : FakeGravityBody
         Destroy(soundObj, 1f);
 
         Destroy(gameObject);
+    }
+
+    public void FreezeEnemy(float time)
+    {
+        isFreezed = true;
+
+        StartCoroutine(UnFreezeEnemy(time));
+    }
+
+    private IEnumerator UnFreezeEnemy(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        isFreezed = false;
     }
 
     protected void OnCollisionEnter(Collision collision)

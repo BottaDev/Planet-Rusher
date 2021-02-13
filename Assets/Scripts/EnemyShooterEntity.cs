@@ -14,6 +14,9 @@ public class EnemyShooterEntity : EnemyEntity
 
     protected override void Update()
     {
+        if (isFreezed)
+            return;
+
         base.Update();
 
         if (currentFireRate <= 0)

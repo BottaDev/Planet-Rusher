@@ -2909,7 +2909,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 11.65
+  m_fontSize: 10.3
   m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6087,7 +6087,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 22.75
+  m_fontSize: 20.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6320,7 +6320,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 8.35
+  m_fontSize: 7.35
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8125,7 +8125,6 @@ MonoBehaviour:
     level2Completed: 0
     level3Completed: 0
     level4Completed: 0
-    level5Completed: 0
   savePath: /Save.sav
 --- !u!1 &1103948850
 GameObject:
@@ -12308,7 +12307,7 @@ MonoBehaviour:
     spaceCount: 6
     wordCount: 7
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -14407,8 +14406,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2026458165}
-        m_MethodName: ChangeScene
-        m_Mode: 5
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14972,7 +14971,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.85
+  m_fontSize: 18
   m_fontSizeBase: 0
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14989,7 +14988,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0

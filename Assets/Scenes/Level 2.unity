@@ -569,6 +569,7 @@ MonoBehaviour:
   powerUpActived: {fileID: 404667073}
   WinScreen: {fileID: 1685057463}
   LoseScreen: {fileID: 352990744}
+  shootHit: 0
 --- !u!114 &765443129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,4 +1220,5 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
     - {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
+    - {fileID: 6082637231306516969, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}

@@ -201,7 +201,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &28778255
 GameObject:
@@ -551,6 +551,7 @@ MonoBehaviour:
   powerUpActived: {fileID: 7296155153778325119}
   WinScreen: {fileID: 7296155153778325118}
   LoseScreen: {fileID: 886648342}
+  shootHit: 0
 --- !u!114 &765443129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,7 +792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &6722673901774435900
 PrefabInstance:
@@ -1002,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 7296155154636409108, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7296155154636409108, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
@@ -1240,7 +1241,7 @@ PrefabInstance:
     - target: {fileID: 8781571459463682711, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682711, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
