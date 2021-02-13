@@ -69,6 +69,13 @@ public class GameManager : MonoBehaviour
                         dataSave.level3Completed = true;
                         dataSave.level4Completed = true;
                         break;
+                    case "Level 5":
+                        dataSave.level1Completed = true;
+                        dataSave.level2Completed = true;
+                        dataSave.level3Completed = true;
+                        dataSave.level4Completed = true;
+                        dataSave.level5Completed = true;
+                        break;
                 }
 
                 streamWriter.Write(dataSave.DeserializeData());

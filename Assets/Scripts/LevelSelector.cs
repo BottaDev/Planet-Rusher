@@ -6,19 +6,23 @@ using TMPro;
 
 public class LevelSelector : MonoBehaviour
 {
+    [Range(min: 1, max: 5)]
+    public int selectedLevel = 1;
+
+    [Header("UI")]
     public Button playButton;
     public TMP_Text buttonText;
     public GameObject lockedText;
 
-    [Range(min: 1, max: 4 )]
-    public int selectedLevel = 1;
+    [Header("Objects")]
+    public GameObject[] levelProps;
 
     public void ChangeLevelSelection(int index)
     {
         int tempSelectedLevel = selectedLevel;
         selectedLevel += index;
 
-        if (selectedLevel < 1 || selectedLevel > 4)
+        if (selectedLevel < 1 || selectedLevel > 5)
             selectedLevel = tempSelectedLevel;
 
         CheckLevelAvailability();
@@ -29,55 +33,63 @@ public class LevelSelector : MonoBehaviour
         switch (selectedLevel)
         {
             case 1:
-                lockedText.SetActive(false);
-                playButton.interactable = true;
-                buttonText.color = Color.white;
+                SetMenu(true);
+
+                DisableProps();
+                levelProps[0].SetActive(true);
                 break;
 
             case 2:
-                if (GameManager.instance.dataSave.level2Completed)
-                {
-                    lockedText.SetActive(false);
-                    playButton.interactable = true;
-                    buttonText.color = Color.white;
-                }
-                else
-                {
-                    lockedText.SetActive(true);
-                    playButton.interactable = false;
-                    buttonText.color = Color.black;
-                }
+                SetMenu(GameManager.instance.dataSave.level2Completed);
+
+                DisableProps();
+                levelProps[1].SetActive(true);
                 break;
 
             case 3:
-                if (GameManager.instance.dataSave.level3Completed)
-                {
-                    lockedText.SetActive(false);
-                    playButton.interactable = true;
-                    buttonText.color = Color.white;
-                }
-                else
-                {
-                    lockedText.SetActive(true);
-                    playButton.interactable = false;
-                    buttonText.color = Color.black;
-                }
+                SetMenu(GameManager.instance.dataSave.level3Completed);
+
+                DisableProps();
+                levelProps[2].SetActive(true);
                 break;
 
             case 4:
-                if (GameManager.instance.dataSave.level4Completed)
-                {
-                    lockedText.SetActive(false);
-                    playButton.interactable = true;
-                    buttonText.color = Color.white;
-                }
-                else
-                {
-                    lockedText.SetActive(true);
-                    playButton.interactable = false;
-                    buttonText.color = Color.black;
-                }
+                SetMenu(GameManager.instance.dataSave.level4Completed);
+
+                DisableProps(); 
+                levelProps[3].SetActive(true);
+                break;
+
+            case 5:
+                SetMenu(GameManager.instance.dataSave.level5Completed);
+
+                DisableProps();
+                levelProps[4].SetActive(true);
                 break;
         }
+    }
+
+    private void DisableProps()
+    {
+        for (int i = 0; i < levelProps.Length; i++)
+        {
+            levelProps[i].SetActive(false);
+        }
+    }
+
+    private void SetMenu(bool levelCompleted)
+    {
+        if (levelCompleted)
+        {
+            lockedText.SetActive(false);
+            playButton.interactable = true;
+            buttonText.color = Color.white;
+        }
+        else
+        {
+            lockedText.SetActive(true);
+            playButton.interactable = false;
+            buttonText.color = Color.black;
+        }        
     }
 }

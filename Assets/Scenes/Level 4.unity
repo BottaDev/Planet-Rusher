@@ -702,33 +702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1666899260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8781571459463682715, guid: 3e1d7c7df697850408db53e84cf2f867,
-    type: 3}
-  m_PrefabInstance: {fileID: 8781571459021759390}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1666899270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666899260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnerName: Shooter Enemy
-  spawnTime: 20
-  objectToSpawn: {fileID: 5781721364710754985, guid: 60232085823ba20468d1f37f45f448b0,
-    type: 3}
-  radius: 0
-  useSphereRadius: 1
-  currentSpawnTime: 5
-  center: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
 --- !u!1 &2066614363
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +869,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77851493756282138, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 77851493756282138, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 77851493756282138, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 77851493756282138, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 766846655720725970, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1156,6 +1149,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7608745536166792168, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7925063950467600647, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1234,6 +1232,33 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: spawnTime
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: props.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: propsToSpawn
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: props.Array.data[0]
+      value: 
+      objectReference: {fileID: 2436367329116075379, guid: 2e879590bab02044891bc1f2a90908b0,
+        type: 3}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: props.Array.data[1]
+      value: 
+      objectReference: {fileID: 1278108263194046517, guid: 8cde73c338a5aa848abe4f480e67ef3b,
+        type: 3}
     - target: {fileID: 7716276001025412291, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: objectToSpawn
@@ -1341,5 +1366,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}

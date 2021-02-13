@@ -1141,6 +1141,16 @@ PrefabInstance:
       propertyPath: spawnTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: props.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450644966139205714, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: propsToSpawn
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8781571459463682709, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
       propertyPath: spawnTime
@@ -1208,4 +1218,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
+    - {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
