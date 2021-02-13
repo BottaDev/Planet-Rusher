@@ -40,28 +40,28 @@ public class LevelSelector : MonoBehaviour
                 break;
 
             case 2:
-                SetMenu(GameManager.instance.dataSave.level2Completed);
+                SetMenu(GameManager.instance.dataSave.level1Completed);
 
                 DisableProps();
                 levelProps[1].SetActive(true);
                 break;
 
             case 3:
-                SetMenu(GameManager.instance.dataSave.level3Completed);
+                SetMenu(GameManager.instance.dataSave.level2Completed);
 
                 DisableProps();
                 levelProps[2].SetActive(true);
                 break;
 
             case 4:
-                SetMenu(GameManager.instance.dataSave.level4Completed);
+                SetMenu(GameManager.instance.dataSave.level3Completed);
 
                 DisableProps(); 
                 levelProps[3].SetActive(true);
                 break;
 
             case 5:
-                SetMenu(GameManager.instance.dataSave.level5Completed);
+                SetMenu(GameManager.instance.dataSave.level4Completed);
 
                 DisableProps();
                 levelProps[4].SetActive(true);

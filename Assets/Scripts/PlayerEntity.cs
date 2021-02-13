@@ -6,6 +6,7 @@ public class PlayerEntity : FakeGravityBody
 {
     [Header("Player Settings")]
     public float movementSpeed = 6;
+    public float currentMovementSpeed = 6;
     public float rotationSpeed = 6;
     public float fireRate = 10;
     [Header("Shot Settings")]
@@ -27,6 +28,8 @@ public class PlayerEntity : FakeGravityBody
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
         audioSource = GetComponent<AudioSource>();
         uiManager =GameObject.Find("LevelManager").GetComponent<UIManager>();
+
+        currentMovementSpeed = movementSpeed;
     }
 
     private void KillPlayer()
@@ -66,5 +69,13 @@ public class PlayerEntity : FakeGravityBody
     public void SetAudioClip(AudioClip clip)
     {
         audioSource.clip = clip;
+    }
+
+    public void ChangeMovementSpeed(bool debuff)
+    {
+        if (debuff)
+            currentMovementSpeed = movementSpeed / 2;
+        else
+            currentMovementSpeed = movementSpeed;
     }
 }

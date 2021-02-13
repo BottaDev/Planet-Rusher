@@ -28,7 +28,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        Vector3 targetMoveAmount = Vector3.forward * playerEntity.movementSpeed;
+        Vector3 targetMoveAmount = Vector3.forward * playerEntity.currentMovementSpeed;
         moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
 
         if (inputX < 0)
