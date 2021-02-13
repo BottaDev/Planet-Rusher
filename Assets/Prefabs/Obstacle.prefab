@@ -186,9 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 168542, guid: 463c6255610d43d4f9c8a5f267cb59b4, type: 3}
-  maskToDestroy:
-    serializedVersion: 2
-    m_Bits: 30720
+  smoke: {fileID: 3641874716942555985, guid: 8fe4aa7625cc761448e1ea62b8bafc9c, type: 3}
 --- !u!1001 &7813668452716272665
 PrefabInstance:
   m_ObjectHideFlags: 0

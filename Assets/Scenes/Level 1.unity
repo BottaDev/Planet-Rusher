@@ -551,6 +551,7 @@ MonoBehaviour:
   powerUpActived: {fileID: 769641699}
   WinScreen: {fileID: 7296155153778325118}
   LoseScreen: {fileID: 886648342}
+  shootHit: 0
 --- !u!114 &765443129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +569,7 @@ MonoBehaviour:
     level2Completed: 0
     level3Completed: 0
     level4Completed: 0
+    level5Completed: 0
   savePath: /Save.sav
 --- !u!114 &769641699 stripped
 MonoBehaviour:
@@ -950,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 897348327296563489, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.19999695
+      value: -0.19998169
       objectReference: {fileID: 0}
     - target: {fileID: 2086198501884922990, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
@@ -1186,6 +1188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583775297881565198, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.025024414
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce873db26bc5c743ab22667f6049684, type: 3}

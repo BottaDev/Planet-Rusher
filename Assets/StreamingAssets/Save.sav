@@ -1,6 +1,7 @@
 {
     "level1Completed": true,
-    "level2Completed": false,
+    "level2Completed": true,
     "level3Completed": false,
-    "level4Completed": false
+    "level4Completed": false,
+    "level5Completed": false
 }
