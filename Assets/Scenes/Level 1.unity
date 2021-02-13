@@ -569,7 +569,6 @@ MonoBehaviour:
     level2Completed: 0
     level3Completed: 0
     level4Completed: 0
-    level5Completed: 0
   savePath: /Save.sav
 --- !u!114 &769641699 stripped
 MonoBehaviour:
@@ -1290,4 +1289,5 @@ PrefabInstance:
     - {fileID: 8410247813302714670, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
     - {fileID: 1178247765537636305, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
     - {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
+    - {fileID: 6082637231306516969, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1d7c7df697850408db53e84cf2f867, type: 3}

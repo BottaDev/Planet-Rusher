@@ -11,7 +11,10 @@ public class ShotController : FakeGravityBody
     public override void Start()
     {
         base.Start();
-        player = GameObject.Find("Player").GetComponent<PlayerInput>();
+
+        if (gameObject.layer == 13)
+            player = GameObject.Find("Player").GetComponent<PlayerInput>();
+
         Destroy(gameObject, timeToDestroy);
     }
 
@@ -25,14 +28,25 @@ public class ShotController : FakeGravityBody
         if (collision.gameObject.layer == 11)
         {
             collision.gameObject.GetComponent<EnemyEntity>().TakeDamage();
-            player.ApplyFastCD();
+            ApplyCD();
         }
         else if(collision.gameObject.layer == 10)
-            player.ApplyFastCD();
+        {
+            ApplyCD();
+        }
         else if (collision.gameObject.layer == 12 || collision.gameObject.layer == 13)
+        {
             Destroy(collision.gameObject);
+        }
+            
 
         if (collision.gameObject.layer != 9)
             Destroy(gameObject);
+    }
+
+    private void ApplyCD()
+    {
+        if (gameObject.layer == 13)
+            player.ApplyFastCD();
     }
 }

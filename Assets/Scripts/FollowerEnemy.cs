@@ -12,6 +12,9 @@ public class FollowerEnemy : EnemyEntity
 
 	protected override void Update()
 	{
+		if (isFreezed)
+			return;
+
 		base.Update();
 
 		if (target != null)
