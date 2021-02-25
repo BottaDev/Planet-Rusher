@@ -8,6 +8,8 @@ public class ComplexEnemyShooterEntity : EnemyShooterEntity
 
     protected override void Shot()
     {
+        audioSource.Play();
+
         StartCoroutine(ShotIdle());
 
         currentFireRate = fireRate;

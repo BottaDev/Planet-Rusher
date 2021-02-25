@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1307273f1ad4340862741713cd7cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnerName: Basic Enemy
+  spawnerName: 
   spawnTime: 7
   objectToSpawn: {fileID: 5781721364710754985, guid: 139e140b25f7b004d915b9db80a75d96,
     type: 3}
@@ -613,6 +613,7 @@ MonoBehaviour:
   powerUpActived: {fileID: 551997073}
   WinScreen: {fileID: 7296155153778325118}
   LoseScreen: {fileID: 886648342}
+  shootHit: 0
 --- !u!1 &886648342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7296155153454766187, guid: 3ce873db26bc5c743ab22667f6049684,
@@ -938,7 +939,7 @@ PrefabInstance:
     - target: {fileID: 897348327296563489, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.19999695
+      value: -0.2000122
       objectReference: {fileID: 0}
     - target: {fileID: 2086198501884922990, guid: 3ce873db26bc5c743ab22667f6049684,
         type: 3}
@@ -1270,6 +1271,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.024963379
       objectReference: {fileID: 0}
+    - target: {fileID: 8583775297881565198, guid: 3ce873db26bc5c743ab22667f6049684,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.31741333
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce873db26bc5c743ab22667f6049684, type: 3}
 --- !u!1 &7296155153778325118 stripped
@@ -1294,6 +1300,22 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnTime
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: objectToSpawn
+      value: 
+      objectReference: {fileID: 5781721364710754985, guid: 0a2961b7b4e30d142ba65f259ed89a16,
+        type: 3}
+    - target: {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: spawnerName
+      value: Complex Shooter Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244446788116364689, guid: 3e1d7c7df697850408db53e84cf2f867,
+        type: 3}
+      propertyPath: spawnTime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1620826779402203489, guid: 3e1d7c7df697850408db53e84cf2f867,
         type: 3}
