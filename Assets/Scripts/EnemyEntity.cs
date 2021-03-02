@@ -14,15 +14,9 @@ public class EnemyEntity : FakeGravityBody
 
     public Animator animator;
 
-    public SpawnPowerUp powerUp;
-    public UIManager uiManager;
-    private StopperSoounds stopper;
-
     public override void Awake()
     {
         base.Awake();
-
-        //stopper = GameObject.Find("Stopper Sounds").GetComponent<StopperSoounds>();
 
         currentHp = baseHp;
     }
@@ -70,12 +64,6 @@ public class EnemyEntity : FakeGravityBody
         yield return new WaitForSeconds(time);
 
         isFreezed = false;
-
-        stopper.DesactivedPowerUp();
-
-        uiManager.powerUpActived.enabled = false;
-        uiManager.powerUpTimeLeftText.enabled = true;
-        powerUp.isActived = false;
     }
 
     protected void OnCollisionEnter(Collision collision)
