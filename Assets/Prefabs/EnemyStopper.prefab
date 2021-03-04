@@ -157,8 +157,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 0}
   duration: 5
-  audioSource: {fileID: 2786443296611891323}
   animator: {fileID: 7893488472034642342}
+  stopperSounds: {fileID: 1521640839244261131, guid: 0af1651c592beff4f83d111435f6b659,
+    type: 3}
 --- !u!82 &2786443296611891323
 AudioSource:
   m_ObjectHideFlags: 0

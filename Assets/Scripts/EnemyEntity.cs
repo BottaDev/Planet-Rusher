@@ -22,7 +22,8 @@ public class EnemyEntity : FakeGravityBody
     {
         base.Awake();
 
-        //stopper = GameObject.Find("Stopper Sounds").GetComponent<StopperSoounds>();
+        uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
+        powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
 
         currentHp = baseHp;
     }
@@ -53,7 +54,7 @@ public class EnemyEntity : FakeGravityBody
         CreateDeathEffect();
 
         GameObject soundObj = Instantiate(deathSound, transform.position, transform.rotation);
-        Destroy(soundObj, 1f);
+        Destroy(soundObj, 6);
 
         Destroy(gameObject);
     }
@@ -71,6 +72,7 @@ public class EnemyEntity : FakeGravityBody
 
         isFreezed = false;
 
+        stopper = GameObject.Find("Stopper Sounds(Clone)").GetComponent<StopperSoounds>();
         stopper.DesactivedPowerUp();
 
         uiManager.powerUpActived.enabled = false;

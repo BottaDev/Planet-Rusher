@@ -7,7 +7,6 @@ public class EnemyStopper : FakeGravityBody
     public float duration;
     public Animator animator;
     public GameObject stopperSounds;
-    private StopperSoounds stopper;
     private SpawnPowerUp powerUp;
     private UIManager uiManager;
 
@@ -15,7 +14,6 @@ public class EnemyStopper : FakeGravityBody
     {
         base.Awake();
 
-        //stopper = GameObject.Find("Stopper Sounds").GetComponent<StopperSoounds>();
         powerUp = GameObject.Find("Planet").GetComponent<SpawnPowerUp>();
         uiManager = GameObject.Find("LevelManager").GetComponent<UIManager>();
     }
@@ -26,11 +24,11 @@ public class EnemyStopper : FakeGravityBody
         {
             uiManager.powerUpSpawned.enabled = false;
             uiManager.powerUpActived.enabled = true;
+            powerUp.isSpawned = false;
             powerUp.isActived = true;
 
-            GameObject soundObj = Instantiate(stopperSounds, transform.position, transform.rotation);
-
             StopEnemies();
+            GameObject soundObj = Instantiate(stopperSounds, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
