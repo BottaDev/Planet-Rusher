@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 8410247813302714670}
   - component: {fileID: 1244446788116364689}
   - component: {fileID: 110909174006772113}
-  - component: {fileID: 6082637231306516969}
   - component: {fileID: 1450644966139205714}
   - component: {fileID: 5952650483425821603}
   - component: {fileID: 1019207837381285665}
@@ -224,29 +223,7 @@ MonoBehaviour:
   isSpawned: 0
   isActived: 0
   audioSource: {fileID: 1019207837381285665}
---- !u!114 &6082637231306516969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8781571459463682715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bd2b809c7c06e4e8d50e85097670d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnerName: Enemy Stopper
-  spawnTime: 40
-  objectToSpawn: {fileID: 9199754546526095509, guid: c4bf82787f0407d4d9c8c56e87f2b10f,
-    type: 3}
-  radius: 0
-  useSphereRadius: 1
-  currentSpawnTime: 3
-  center: {x: 0, y: 0, z: 0}
-  size: {x: 0, y: 0, z: 0}
-  isSpawned: 0
-  audioSource: {fileID: 1019207837381285665}
+  stopper: {fileID: 9199754546526095509, guid: c4bf82787f0407d4d9c8c56e87f2b10f, type: 3}
 --- !u!114 &1450644966139205714
 MonoBehaviour:
   m_ObjectHideFlags: 0

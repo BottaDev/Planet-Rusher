@@ -16,9 +16,11 @@ public class PlayerEntity : FakeGravityBody
     public GameObject sphere;
     [Header("Audio Settings")]    
     public AudioClip[] sounds;
+    public GameObject deathSound;
 
     [HideInInspector]
     public AudioSource audioSource;
+    public AudioClip audioClip;
     private SpawnPowerUp powerUp;
     private UIManager uiManager;
 
@@ -35,6 +37,7 @@ public class PlayerEntity : FakeGravityBody
     private void KillPlayer()
     {
         CreateDeathEffect();
+        CreateSoundsDead();
 
         LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         levelManager.WinLoseGame(false);
@@ -77,5 +80,11 @@ public class PlayerEntity : FakeGravityBody
             currentMovementSpeed = movementSpeed / 2;
         else
             currentMovementSpeed = movementSpeed;
+    }
+
+    private void CreateSoundsDead()
+    {
+        GameObject soundObj = Instantiate(deathSound, transform.position, transform.rotation);
+        Destroy(soundObj, 1f);
     }
 }
