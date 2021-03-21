@@ -20,7 +20,11 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
 
+#if UNITY_EDITOR
         savePath = Application.streamingAssetsPath + savePath;
+#else
+        savePath = Application.persistentDataPath + savePath;
+#endif
     }
 
     private void Start()
@@ -38,8 +42,13 @@ public class GameManager : MonoBehaviour
         {
             if (sceneName != "Main Menu")
             {
+#if UNITY_EDITOR
                 if (!Directory.Exists(Application.streamingAssetsPath))
                     Directory.CreateDirectory(Application.streamingAssetsPath);
+#else
+                if (!Directory.Exists(Application.persistentDataPath))
+                    Directory.CreateDirectory(Application.persistentDataPath);
+#endif
 
                 if (!File.Exists(savePath))
                     streamWriter = File.CreateText(savePath);
