@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 6428166}
   - component: {fileID: 6428165}
   - component: {fileID: 6428164}
+  - component: {fileID: 6428167}
   m_Layer: 0
   m_Name: EndGameCamera
   m_TagString: Untagged
@@ -203,6 +204,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!45 &6428167
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428163}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 2d056ac30ecc9e542b26e06133f23602, type: 2}
 --- !u!1 &28778255
 GameObject:
   m_ObjectHideFlags: 0
